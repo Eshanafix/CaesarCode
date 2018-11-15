@@ -37,3 +37,6 @@ public class CaesarCipherDecoder {
 		return false;
 	}
 }
+
+//Algorithm for checking all shifts, add an ascii value, if it goes over 90, overflow through 65 and
+// Get all the remainder, once it is all done check if done

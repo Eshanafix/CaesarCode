@@ -17,13 +17,14 @@ public class CaesarCipherDecoder {
 		
 		System.out.println("Hi! Welcome To Eshan's Totally Badass Caesar Cipher Decoder Mk1!");
 		System.out.print("Please enter in a message you would like to decode -->  ");
-		String decode = input.next();
-		System.out.println(decode);
+		String decode = input.nextLine();
+		
+		String[] valArray = decode.split(" ");
+		
 	}
 	
-	public boolean checkIfWord(String input) {
+	public boolean inputIfWord(String[] input) {
 		
-		String[] check = input.split(" ");
 		int waluigi = 0; 
 		
 		try(BufferedReader bReader = new BufferedReader(new FileReader("wordList.txt"))){
@@ -31,8 +32,8 @@ public class CaesarCipherDecoder {
 			int size = Integer.parseInt(bReader.readLine());
 			
 			
-			for(int i = 0; i < check.length; i++) {
-				String compare = check[i];
+			for(int i = 0; i < input.length; i++) {
+				String compare = input[i];
 				for(int j = 0; j < size; j++) {
 					String val = bReader.readLine();
 					if(compare.equals(val)) {
@@ -45,12 +46,26 @@ public class CaesarCipherDecoder {
 			
 		}
 		
-		if(waluigi == check.length) {
+		if(waluigi == input.length) {
 			return true;
 		}
 		return false;
 	}
 }
 
-//Algorithm for checking all shifts, add an ascii value, if it goes over 90, overflow through 65 and
-// Get all the remainder, once it is all done check if done
+//Algorithm for inputing all shifts, add an ascii value, if it goes over 90, overflow through 65 and
+// Get all the remainder, once it is all done input if done
+
+
+
+// Code for Incrementation below
+/*
+
+String str="ABCDEF";
+		String strIncremented=new String();
+		for(int i=0;i<str.length();i++){
+			strIncremented+=(char)(str.charAt(i)+1);
+		}
+	
+
+*/

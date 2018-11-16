@@ -2,6 +2,7 @@ package cipherSplosion;
 
 import java.io.*;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class CaesarCipherDecoder {
 	
@@ -21,6 +22,22 @@ public class CaesarCipherDecoder {
 		
 		String[] valArray = decode.split(" ");
 		
+	}
+	
+	public String autoLetterShift(String[] input) {
+		
+		ArrayList<String> matches = new ArrayList<String>();
+		
+		for(int i = 1;i < 25; i++) {
+			
+			String incrementVal = " ";
+			for(int j = 0; j < input.length; j++) {
+				
+				
+				
+			}
+			
+		}
 	}
 	
 	public boolean inputIfWord(String[] input) {
@@ -46,7 +63,7 @@ public class CaesarCipherDecoder {
 			
 		}
 		
-		if(waluigi == input.length) {
+		if(waluigi >= 1) {
 			return true;
 		}
 		return false;

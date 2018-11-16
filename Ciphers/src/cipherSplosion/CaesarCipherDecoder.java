@@ -1,10 +1,23 @@
 package cipherSplosion;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class CaesarCipherDecoder {
+	
+	Scanner input = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 		
+		runDecryption();
+		
+	}
+	
+	public void runDecryption() {
+		System.out.println("Hi! Welcome To Eshan's Totally Badass Caesar Cipher Decoder Mk1!");
+		System.out.print("Please enter in a message you would like to decode -->  ");
+		String decode = input.next();
+		System.out.println(decode);
 	}
 	
 	public boolean checkIfWord(String input) {

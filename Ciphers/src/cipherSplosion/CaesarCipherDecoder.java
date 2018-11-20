@@ -32,7 +32,7 @@ public class CaesarCipherDecoder {
 			
 			String incrementVal = " ";
 			for(int j = 0; j < input.length; j++) {
-				
+				String temp = in
 				
 				
 			}
